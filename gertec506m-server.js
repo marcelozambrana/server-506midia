@@ -179,33 +179,3 @@ function start() {
 
 var terminais = [];
 start();
-
-
-    /*            case 0:
-                return 0x0100;//PRETO
-            case 1:
-                return 0x010C;//AZUL
-            case 2:
-                return 0x010E;//ÀGUA
-            case 3:
-                return 0x0107;//CINZA
-            case 4:
-                return 0x0102;//VERDE
-            case 5:
-                return 0x0101;//MARROM
-            case 6:
-                return 0x0104;//AZUL MARINHO
-            case 7:
-                return 0x0103;//OLIVA
-            case 8:
-                return 0x0105;//ROXO
-            case 9:
-                return 0x0109;//VERMELHO
-            case 10:
-                return 0x0108;//PRATA
-            case 11:
-                return (short) 0xFFFF;//TRANSPARENTE
-            case 12:
-                return 0x010F;//BRANCO
-            case 13:
-                return 0x010B;//AMARELO*/
