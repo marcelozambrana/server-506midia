@@ -23,7 +23,7 @@ https://github.com/oracle/node-oracledb/blob/master/INSTALL.md
 https://github.com/oracle/node-oracledb/blob/master/doc/api.md#getstarted  
 https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads  
   
-5) CREATE OR REPLACE PROCEDURE buscaPreco(BARCODE_IN IN STRING, PRODUTO_OUT OUT STRING, PRECO_OUT OUT STRING)  
+6) CREATE OR REPLACE PROCEDURE buscaPreco(BARCODE_IN IN STRING, PRODUTO_OUT OUT STRING, PRECO_OUT OUT STRING)  
  IS  
   pDescricao VARCHAR(100);  
   pValor VARCHAR(100);  
@@ -56,5 +56,5 @@ BEGIN
 	dbms_output.put_line('x: ' || x || ' y: ' || y);  
 END;  
   
-6) up server:  
-	node gertect506m-server.js  
+7) UP Server:  
+node gertect506m-server.js  
