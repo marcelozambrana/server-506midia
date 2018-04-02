@@ -82,7 +82,7 @@ function loopingVerificaNovoCodigoDeBarras() {
 
   var n1 = now().toFixed(10);
 
-  for (i = 0; i < 1000; i++) { 
+  for (i = 0; i < 100; i++) { 
     let terminalID = i+1;
     let serialPort = new Buffer(1);
     let bufferBarCode = new Buffer(256);
@@ -103,8 +103,8 @@ function loopingVerificaNovoCodigoDeBarras() {
         var t3 = now().toFixed(3);
         console.log("t2 (ClearDisplay): " + (t3 - t2).toFixed(3) + " milliseconds.")
 
-        let produto = "CARNE MOÍDA COXAO MOLE MARIA MACIA ACOUGUE";
-        let preco = "300,22";
+        let produto = "Tempero Completo Arisco com Pimenta 300g";
+        let preco = "4,69";
 
         let produtoArrWordWrap = wrap(produto).split('\n');
         let linha1 = (typeof  produtoArrWordWrap[0] != 'undefined') ? produtoArrWordWrap[0] : "";
@@ -161,19 +161,22 @@ function loopingVerificaNovoCodigoDeBarras() {
 
   }
   var n2 = now().toFixed(10);
-  console.log("******** Total ping terminais (tc_getserial): " + ((n2 - n1)/1000).toFixed(6) + " seconds.")
+  console.log("******** Total ping terminais (tc_getserial): " + ((n2 - n1)/1000).toFixed(3) + " seconds.")
 }
 
 function start() {
   let connected = LIB_GERTEC_506M.tc_startserver([],2,3);
-
   if (connected == 1) { 
-    console.log("Servidor inicializado. Aguardando por conexões de terminais...");
+    console.log("> Eurekalabs - Servidor para Terminais de Consulta Modelo Gertec 506 Mídia.");
+    console.log("> Solução utilizando NodeJS sobre DLL (SC504.DLL).");
+
+    console.log("\n\n> Iniciando servidor....");
+    console.log("> Servidor inicializado. Aguardando por conexões de terminais...\n");
   } else {
-    console.log("Falha ao iniciar servidor!");
+    console.log("> Falha ao iniciar servidor!");
   }
   
-  setInterval(loopingVerificaNovoTerminalConectado, 25000);
+  setInterval(loopingVerificaNovoTerminalConectado, 20000);
   setInterval(loopingVerificaNovoCodigoDeBarras, 1300);
 }
 
