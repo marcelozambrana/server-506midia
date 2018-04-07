@@ -1,3 +1,5 @@
+<<<< DEPRECATED >>>>>
+
 1) Instalar node32   
 npm -v 5.6.0  
 nvm install 8.9.4 32 (nvm list 8.9.4 Currently using 32-bit executable)  
